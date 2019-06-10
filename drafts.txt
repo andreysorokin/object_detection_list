@@ -1,0 +1,10 @@
+
+
+
+#%%
+##via template_matching (FFT)
+from skimage.feature import match_template
+f_2d = np.expand_dims(f, axis=0)
+h_2d = np.expand_dims(h, axis=0)
+result = match_template(f_2d, h_2d)[0]
+plot_discrete(result, label='Correlation via FFT', show=True)
